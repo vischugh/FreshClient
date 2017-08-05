@@ -1,0 +1,89 @@
+<div layout="row">
+    <div layout="column">
+        <div flex layout="row">
+            <div flex>
+                <input type="checkbox" ng-model="FilterApplied" ng-change="RemoveFilters(FilterApplied)">Apply Filter</a>
+                <div ng-if="FilterApplied">
+                    <span>Date:</span>
+                    <select ng-model="DateFilter" ng-change="ApplyDateFilter(DateFilter)">
+                    <option value="1">Yesterday</option>
+                    <option value="2">Last Week</option>
+                    <option value="3">Last Month</option>
+                </select>
+                </div>
+            </div>
+            <div ng-if="FilterApplied" flex>
+                <span>Question:</span>
+                <select ng-model="QuestionFilter" ng-change="ShowQuestion(QuestionFilter)">
+                    <option ng-value="1">Q1</option>
+                    <option ng-value="2">Q2</option>
+                    <option ng-value="3">Q3</option>
+                    <option ng-value="4">Q4</option>
+                    <option ng-value="5">Q5</option>
+                    <option ng-value="6">Q6</option>
+                    <option ng-value="7">Q7</option>
+                    <option ng-value="8">Q8</option>
+                </select>
+            </div>
+        </div>
+        <div flex>
+            <table class="results-table" style="border: 1px solid black;" flex>
+                <tr>
+                    <th>Date</th>
+                    <th ng-if="VisibleQuestion[1]">Q1. Hours of sleep you received last night</th>
+                    <th ng-if="VisibleQuestion[2]">Q2. Quality of sleep you received last night</th>
+                    <th ng-if="VisibleQuestion[3]">Q3. Level of academic stress you are experiencing today</th>
+                    <th ng-if="VisibleQuestion[4]">Q4. Level of general life stress you are experiencing today</th>
+                    <th ng-if="VisibleQuestion[5]">Q5. Level of soreness you are experiencing today</th>
+                    <th ng-if="VisibleQuestion[6]">Q6. Specific body areas that are sore</th>
+                    <th ng-if="VisibleQuestion[7]">Q7. Cups of water you consumed yesterday</th>
+                    <th ng-if="VisibleQuestion[8]">Q8. Do you feel hydrated today?</th>
+                </tr>
+
+                <tr ng-repeat="answers in IndPlayerData" style="border-bottom: 1px solid #f9f9f9; text-align: center;" ng-if="ShowResult(answers.DateDay, answers.DateMonth, answers.DateYear)">
+                <!--<td>PlayerName</td>-->
+                <td>{{answers.DateDay}}/{{answers.DateMonth}}/{{answers.DateYear}}</td>
+                <td ng-if="VisibleQuestion[1]">{{answers.Q1}}</td>
+                <td ng-if="VisibleQuestion[2]">{{answers.Q2}}</td>
+                <td ng-if="VisibleQuestion[3]">{{answers.Q3}}</td>
+                <td ng-if="VisibleQuestion[4]">{{answers.Q4}}</td>
+                <td ng-if="VisibleQuestion[5]">{{answers.Q5}}</td>
+                <td ng-if="VisibleQuestion[6]">{{answers.Q6}}</td>
+                <td ng-if="VisibleQuestion[7]">{{answers.Q7}}</td>
+                <td ng-if="VisibleQuestion[8]">{{answers.Q8}}</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div flex>
+            <span><b>Average Answers</b></span>
+            <table class="results-table" style="border: 1px solid black;" flex>
+                <tr>
+                    <th>Date</th>
+                    <th ng-if="VisibleQuestion[1]">Q1. Hours of sleep you received last night</th>
+                    <th ng-if="VisibleQuestion[2]">Q2. Quality of sleep you received last night</th>
+                    <th ng-if="VisibleQuestion[3]">Q3. Level of academic stress you are experiencing today</th>
+                    <th ng-if="VisibleQuestion[4]">Q4. Level of general life stress you are experiencing today</th>
+                    <th ng-if="VisibleQuestion[5]">Q5. Level of soreness you are experiencing today</th>
+                    <th ng-if="VisibleQuestion[6]">Q6. Specific body areas that are sore</th>
+                    <th ng-if="VisibleQuestion[7]">Q7. Cups of water you consumed yesterday</th>
+                    <th ng-if="VisibleQuestion[8]">Q8. Do you feel hydrated today?</th>
+                </tr>
+
+                <tr ng-repeat="answers in AveragePlayerData" style="border-bottom: 1px solid #f9f9f9; text-align: center;" ng-if="ShowResult(answers.DateDay, answers.DateMonth, answers.DateYear)">
+                    <td>{{answers._id.DateDay}}/{{answers._id.DateMonth}}/{{answers._id.DateYear}}</td>
+                    <td ng-if="VisibleQuestion[1]">{{answers.AvgQ1}}</td>
+                    <td ng-if="VisibleQuestion[2]">{{answers.AvgQ2}}</td>
+                    <td ng-if="VisibleQuestion[3]">{{answers.AvgQ3}}</td>
+                    <td ng-if="VisibleQuestion[4]">{{answers.AvgQ4}}</td>
+                    <td ng-if="VisibleQuestion[5]">{{answers.AvgQ5}}</td>
+                    <td ng-if="VisibleQuestion[6]">{{answers.AvgQ6}}</td>
+                    <td ng-if="VisibleQuestion[7]">{{answers.AvgQ7}}</td>
+                    <td ng-if="VisibleQuestion[8]">{{answers.AvgQ8}}</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>

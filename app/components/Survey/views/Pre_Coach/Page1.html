@@ -1,0 +1,31 @@
+<div>
+    <div>
+        <span>Q1.Rate the difficulty of today's practice</span>
+        <div>
+            <select ng-model="AnsweredOption" ng-change="SaveAnswer('Q11', AnsweredOption)"><option value="">Select</option>
+                <option ng-repeat="rating in RatingScale" value={{$index}}>{{RatingScale[$index]}}</option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <span>Q2.How long did practice last? (in minutes)</span>
+        <div>
+            <input type="number" ng-model="Duration" ng-blur="SaveAnswer('Q17', Duration)" />
+        </div>
+    </div>
+    <br />
+    <div ng-if="respObject.answer['Q11']" ng-init="ComparePracticeHardness()">
+        <table class="results-table" style="border: 1px solid black;" flex>
+
+            <tr>
+                <th>Your Rating</th>
+                <th>Team's Rating</th>
+            </tr>
+
+            <tr>
+                <td>{{CoachAnswer}}</td>
+
+                <td>{{TeamAnswer}}</td>
+            </tr>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div>
+    <table class="signup-table">
+        <form>
+            <h2 style="margin-top: 10px">Signup</h2>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="username" ng-model="NewUser.email" required="required" /></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" ng-model="NewUser.password" required="required" /></td>
+            </tr>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" ng-model="NewUser.name" required="required" /></td>
+            </tr>
+            <tr>
+                <td>Team: </td>
+                <td><select ng-options="team.Name for team in Teams track by team.ID"></td>
+            </tr>
+            <tr>
+                <td>Type: </td>
+                <td>
+                    <select ng-model="NewUser.usertype" required>
+                    <option value=1>Player</option>
+                    <option value=2>Coach</option>
+                    <option value=3>ATC</option>
+                </select>
+                </td>
+            </tr>
+            <tr ng-if="NewUser.usertype == 2 || NewUser.usertype == 3">
+                <td>Unique Code :</td>
+                <td><input type="number" /></td>
+            </tr>
+
+            <tr>
+                <td><input class="btn btn-primary" type="submit" value="Signup" ng-click="SignupUser()" /></td>
+            </tr>
+        </form>
+    </table>
+</div>

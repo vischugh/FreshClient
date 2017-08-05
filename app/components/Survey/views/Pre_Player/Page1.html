@@ -1,0 +1,31 @@
+<div>
+    <span><b>SLEEP</b></span>
+    <div>
+        <span>Q1. Please list how many hours of sleep you received last night?</span>
+        <input type="number" ng-model="AnsweredValue" ng-change="SaveAnswer('Q1', AnsweredValue)"/>
+    </div>
+
+    <div>
+        <span>Q2. Please rate the quality of sleep you received last night?</span>
+        <div>
+            <input type="radio" name="ques1" id="option1" ng-model="AnsweredOption" ng-value='1'  ng-click="SaveAnswer('Q2', AnsweredOption)"/>
+            <label for="option1">Very Poor</label>
+        </div>
+        <div>
+            <input type="radio" name="ques1" id="option2" ng-model="AnsweredOption" ng-value='2'  ng-click="SaveAnswer('Q2', AnsweredOption)"/>
+            <label for="option2">Poor</label>
+        </div>
+        <div>
+            <input type="radio" name="ques1" id="option3" ng-model="AnsweredOption" ng-value='3'  ng-click="SaveAnswer('Q2', AnsweredOption)"/>
+            <label for="option3">Average</label>
+        </div>
+        <div>
+            <input type="radio" name="ques1" id="option4" ng-model="AnsweredOption" ng-value='4'  ng-click="SaveAnswer('Q2', AnsweredOption)"/>
+            <label for="option4">Good</label>
+        </div>
+        <div>
+            <input type="radio" name="ques1" id="option5" ng-model="AnsweredOption" ng-value='5'  ng-click="SaveAnswer('Q2', AnsweredOption)"/>
+            <label for="option5">Great</label>
+        </div>
+    </div>
+</div>

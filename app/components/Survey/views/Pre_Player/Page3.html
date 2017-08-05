@@ -1,0 +1,33 @@
+<div>
+    <span><b>SORENESS</b></span>
+    <div>
+        <span>Q5. Please rate the level of soreness you are experiencing today</span>
+        <div>
+            <input type="radio" name="ques3" id="option1" ng-model="AnsweredOption" ng-value='1'  ng-click="SaveAnswer('Q5', AnsweredOption)"/>
+            <label for="option1">Very Sore</label>
+        </div>
+        <div>
+            <input type="radio" name="ques3" id="option2" ng-model="AnsweredOption" ng-value='2'  ng-click="SaveAnswer('Q5', AnsweredOption)"/>
+            <label for="option2">Sore</label>
+        </div>
+        <div>
+            <input type="radio" name="ques3" id="option3" ng-model="AnsweredOption" ng-value='3'  ng-click="SaveAnswer('Q5', AnsweredOption)"/>
+            <label for="option3">Normal</label>
+        </div>
+        <div>
+            <input type="radio" name="ques3" id="option4" ng-model="AnsweredOption" ng-value='4'  ng-click="SaveAnswer('Q5', AnsweredOption)"/>
+            <label for="option4">Feeling Good</label>
+        </div>
+        <div>
+            <input type="radio" name="ques3" id="option5" ng-model="AnsweredOption" ng-value='5'  ng-click="SaveAnswer('Q5', AnsweredOption)"/>
+            <label for="option5">Feeling Great</label>
+        </div>
+    </div>
+
+    <div>
+        <span>Q6. Please list the specific body areas that are sore</span>
+        <div>
+            <textarea rows="5" ng-model="AnsweredValue" ng-change="SaveAnswer('Q6', AnsweredValue)"/>
+        </div>
+    </div>
+</div>

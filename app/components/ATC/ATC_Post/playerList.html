@@ -1,0 +1,22 @@
+<div ng-init="HideNavigationButtons()" layout="row">
+    <div>
+        <table ng-init="GetAllPlayersForATC()"  style="border: 1px solid black;" flex>
+
+            <tr>
+                <th>Name</th>
+                <th>Performance Rating</th>
+            </tr>
+
+            <tr ng-repeat="(id,value) in AllPlayers" style="border-bottom: 1px solid #f9f9f9">
+                <td>{{value.Name}}</td>
+                <td>
+                    <input type="number" max='10' min='1' ng-model="AnsweredOption" />
+                </td>
+                <td>
+                    <input type="button" value="Save" ng-click="SavePostATCAnswers(value.UserId, AnsweredOption)" />
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>

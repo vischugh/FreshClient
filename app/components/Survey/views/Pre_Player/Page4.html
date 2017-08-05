@@ -1,0 +1,21 @@
+<div>
+    <span><b>HYDRATION</b></span>
+    <div>
+        <span>Q7. How many cups of water did you consume yesterday?</span>
+        <div>
+            <input type="number" ng-model="AnsweredValue" ng-change="SaveAnswer('Q7', AnsweredValue)" />
+        </div>
+    </div>
+
+    <div>
+        <span>Q8. Do you feel hydrated today?</span>
+        <div>
+            <input type="radio" name="ques8" id="option1" ng-model="AnsweredOption" ng-value='1'  ng-click="SaveAnswer('Q8', AnsweredOption)"/>
+            <label for="option1">Yes</label>
+        </div>
+        <div>
+            <input type="radio" name="ques8" id="option2" ng-model="AnsweredOption" ng-value='2'  ng-click="SaveAnswer('Q8', AnsweredOption)"/>
+            <label for="option2">No</label>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="FreshApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh</title>
+
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.css" type="text/css"
+    />
+    <link rel="stylesheet" href="assets/fresh.css" type="text/css" />
+    <link rel="stylesheet" href="assets/bootstrap.min.css" type="text/css" />
+</head>
+
+<body>
+    <div class="col-lg-10">
+        <div class="top-panel">
+            <span style="font-size: 32px; color: white">Fresh</span>
+        </div>
+        <div ng-view></div>
+        <br/>
+        <div class="top-panel"></div>
+    </div>
+</body>
+
+</html>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>-->
+
+<script src="assets/angular/angular.min.js"></script>
+<script src="assets/angular/angular-route.min.js"></script>
+<script src="assets/angular/angular-animate.min.js"></script>
+<script src="assets/angular/angular-sanitize.min.js"></script>
+<script src="assets/angular/angular-aria.min.js"></script>
+<script src="assets/angular/angular-messages.min.js"></script>
+<script src="assets/angular/angular-resource.min.js"></script>
+<script src="assets/angular/angular-cookies.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="assets/angular/angular-material.min.js"></script>
+
+<!-- User Defined Scripts -->
+<script src="app.module.js"></script>
+<script src="app.config.js"></script>
+<script src="app/utilities/fresh.constants.js"></script>
+<script src="app/utilities/fresh.factory.js"></script>
+<script src="app/utilities/fresh.service.js"></script>
+<script src="app/components/Login/controller/login.controller.js"></script>
+<script src="app/components/Survey/controller/survey.controller.js"></script>
+<script src="app/components/Results/controller/results.controller.js"></script>
+<script src="app/components/ATC/atc.controller.js"></script>
+<script src="app/components/Calendar/calendar.controller.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>

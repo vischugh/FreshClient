@@ -1,0 +1,14 @@
+<div>
+    <div ng-if="UserType == 1 && Status == 2">
+        <span>Your ID is still not approved by ATC</span>
+    </div>
+    <div ng-if="(UserType == 1 && Status == 1) || UserType == 2 || UserType == 3">
+        <div ng-if="UserType == '3'" ng-click="OpenPage('pendingRequests')" class="clickable clckble-div">Pending Requests</div>
+        <div ng-if="UserType != '3'" ng-click="OpenPage('survey')" class="clickable clckble-div">Take Survey</div>
+        <div ng-if="UserType == '3'" ng-click="OpenPage('atcSurvey')" class="clickable clckble-div">Take Survey</div>
+        <div ng-click="OpenPage('result')" class="clickable clckble-div">Check Results</div>
+        <div ng-if="UserType == '3'" ng-click="OpenPage('atcPlayers')" class="clickable clckble-div">Individual Player Answers</div>
+        <div ng-click="OpenPage('calendar')" class="clickable clckble-div">Add Event</div>
+        <div ng-if="UserType == '3'" ng-click="OpenPage('addTeam')" class="clickable clckble-div">Add New Team</div>
+    </div>
+</div>

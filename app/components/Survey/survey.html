@@ -1,0 +1,9 @@
+<div>
+    <!--<input type="button" value="Save Survey" ng-if="!IsLastPage"/>-->
+    <div ng-include src="GetTemplateUrl()"></div>
+    <div ng-hide="HideButtons">
+    <input class="btn btn-primary" type="button" value="Back" ng-disabled="IsFirstPage" ng-click="Back()" />
+    <input class="btn btn-primary" type="button" value="Next" ng-if="!IsLastPage" ng-click="Next()" />
+    <input class="btn btn-success" type="button" value="Submit Answers" ng-if="IsLastPage" ng-click="SubmitRespondent()" />
+    </div>
+</div>

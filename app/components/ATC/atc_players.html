@@ -1,0 +1,12 @@
+<div ng-init="GetAllPlayersForATC()">
+    <table class="results-table">
+        <tr>
+            <th>Player Name</th>
+        </tr>
+        <tr ng-repeat="player in AllPlayers">
+            <td>{{player.Name}}</td>
+            <td><input class="btn btn-success" type="button" value="Show Results" ng-click="ShowIndividualResult(player.UserId)"
+                /></td>
+        </tr>
+    </table>
+</div>

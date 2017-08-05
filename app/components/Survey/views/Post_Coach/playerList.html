@@ -1,0 +1,23 @@
+<div ng-init="HideNavigationButtons(); getPlayersForCoach();" layout="row">
+    <div>
+        <table class="results-table" style="border: 1px solid black;" flex>
+
+            <tr>
+                <th>Name</th>
+                <th>Performance Rating</th>
+                <th>Submit</th>
+            </tr>
+
+            <tr ng-repeat="(id,value) in Players" style="border-bottom: 1px solid #f9f9f9">
+                <td>{{value.Name}}</td>
+                <td>
+                    <input type="number" max='10' min='1' ng-model="AnsweredOption" />
+                </td>
+                <td>
+                    <input class = "btn btn-success" type="button" value="Save" ng-click="SavePostCoachAnswers(value.UserId, AnsweredOption)" />
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div>
+    <div>
+        <span>Q1.Rate the difficulty of today's practice</span>
+        <div>
+            <select ng-model="AnsweredOption" ng-change="SaveAnswer('Q13', AnsweredOption)"><option value="">Select</option>
+                <option ng-repeat="rating in RatingScale" value={{$index}}>{{RatingScale[$index]}}</option>
+            </select>
+        </div>
+    </div>
+</div>

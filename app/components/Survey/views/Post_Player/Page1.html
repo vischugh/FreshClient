@@ -1,0 +1,33 @@
+<div>
+    <div>
+        <span>Q1.Rate the difficulty of today's practice</span>
+        <div>
+            <select ng-model="AnsweredOption" ng-change="SaveAnswer('Q9', AnsweredOption)"><option value="">Select</option>
+                <option ng-repeat="rating in RatingScale" value="{{$index}}">{{$index}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <span>Q2. Rate your personal performance today</span>
+        <div>
+            <select ng-model="AnsweredValue" ng-change="SaveAnswer('Q10', AnsweredValue)"><option value="">Select</option>
+                <option ng-repeat="rating in RatingScale" value="{{$index}}">{{$index}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <span>Q3. Did you participate in the entire practice?</span>
+        <div>
+            <input id="YesOption" type="radio" ng-model="AnsweredValue" value="yes" ng-click="SaveAnswer('Q15', AnsweredValue)" />
+            <label for="YesOption">Yes</label>
+            <input id="NoOption" type="radio" ng-model="AnsweredValue" value="no" ng-click="SaveAnswer('Q15', AnsweredValue)" />
+            <label for="NoOption">No</label>
+        </div>
+        <div ng-if="ShowDurationQuestion()">
+            <span>Q4. How many minutes of practice did you participate?</span>
+            <input type="number" ng-model="Duration" ng-blur="SaveAnswer('Q16', Duration)" />
+        </div>
+    </div>
+</div>

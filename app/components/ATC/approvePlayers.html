@@ -1,0 +1,20 @@
+<div ng-init="getPendingPlayersForATC()">
+    <table class="results-table">
+        <tr>
+            <th>Player Name</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-if = "PendingNo == 1" ng-repeat="player in PendingPlayers">
+            <td>{{player.Name}}</td>
+            <td ng-if="player.StatusCd == 2">Inactive</td>
+            <td ng-if="player.StatusCd == 1">Active</td>
+            <td><input class="btn btn-success" type="button" value="Approve" ng-click="ApprovePlayer(player.UserId)" ng-if="player.StatusCd == 2"/></td>
+        </tr>
+        <tr ng-if = "PendingNo == 0">
+            <td >No Pending Requests.</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>

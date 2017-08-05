@@ -1,0 +1,16 @@
+<div>
+    <table class="signin-table">
+    <form>
+        <h2 style="margin-top: 10px">Login</h2>
+        <tr><td>Username: </td><td><input type="email" name="username" ng-model="User.username" required/></td></tr>
+        <tr><td>Password: </td><td><input type="password" name="password" ng-model="User.password" required/></td></tr>
+        <tr>
+        <td>Choose the type of survey:</td>
+            <td><input type="radio" name="type" ng-model="TypeOfSurvey" ng-value="1" ng-click="ChangeType()" />Pre-training Survey</td>
+            <td><input type="radio" name="type" ng-model="TypeOfSurvey" ng-value="2" ng-click="ChangeType()" />Post-training Survey</td>
+        </tr>
+        <tr><td><input class="btn btn-primary" type="button" value="Login" ng-click="ValidateUser()" />
+        <a href="" ng-click="Signup()">Not a member? SignUp</a></td></tr>
+    </form>
+    </table>
+</div>

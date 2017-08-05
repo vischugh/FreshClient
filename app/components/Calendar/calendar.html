@@ -1,0 +1,17 @@
+<div ng-init="HandleClientLoad()">
+    <md-content layout-padding ng-cloak>
+        <div>
+            <span>Event Name: <input type="text" ng-model="EventDescription" /></span><br />
+            <md-datepicker ng-model="SelectedDate" ng-change="AddPracticeDate(SelectedDate)" md-placeholder="Add Event" md-open-on-focus></md-datepicker>
+        </div>
+    </md-content>
+    <div>
+        <span>Invite your team members to the Event</span>
+        <button id="authorize-button" style="display: none;">Authorize</button>
+        <button id="signout-button" style="display: none;">Sign Out of Google Calendar</button>
+        <button id="addevent-button" style="display: none;">Add Event</button>
+
+
+        <pre id="content"></pre>
+    </div>
+</div>
